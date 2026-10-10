@@ -43,8 +43,6 @@
                     const balochi = parts[1].trim().toLowerCase();
                     const foreign = parts[2].trim().toLowerCase();
                     
-                    keywordToIdMap.set(balochi, targetId => id);
-                    keywordToIdMap.set(foreign, targetId => id);
                     keywordToIdMap.set(balochi, id);
                     keywordToIdMap.set(foreign, id);
                 }
@@ -55,15 +53,10 @@
             
             dataText.split('\n').forEach(line => {
                 const parts = line.split(',');
-                if (parts.length >= 3) {
+                if (parts.length >= 2) {
                     const id = parts[0].trim();
-                    const foreignExpl = parts[1].trim();
-                    const balochiExpl = parts[2].trim();
-                    
-                    idToContentMap.set(id, `
-                        <strong>📖 Explanation:</strong> ${foreignExpl}<br><br>
-                        <strong>🌴 Balochi:</strong> ${balochiExpl}
-                    `);
+                    const content = parts.slice(1).join(',');
+                    idToContentMap.set(id, content);
                 }
             });
         } catch (e) {
