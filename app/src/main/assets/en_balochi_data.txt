@@ -1,1 +1,2 @@
-1,GBD: Global Baluchi Dictionary initiative providing multi-lingual education infrastructure.,جی بی ڈی: سیمی سئے او ڈیکولر اسکول موبائل پروجیکٹ۔
+1,CONCEPT ID: 1 (BROTHER) | [DE] bruder: Bruder (Männliches Geschwisterteil) | [EN] brother: Brother (Male sibling sharing the same parents) | [FR] frere: Frère (Fratrie masculine)
+2,CONCEPT ID: 2 (NEW) | [BAL] nokh: New (Not existing before; recently made or discovered) | [EN] new: New (Not existing before; recently made or discovered) | [FR] nouveau: Nouveau (Qui existe depuis peu de temps)
