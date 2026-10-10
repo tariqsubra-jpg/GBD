@@ -33,6 +33,7 @@
 
     async function initializeWebDatabase() {
         try {
+            // Fetch assets from the standard project folder structure paths
             const indexResponse = await fetch('app/src/main/assets/en_balochi_index.txt');
             const indexText = await indexResponse.text();
             
@@ -40,11 +41,8 @@
                 const parts = line.split(',');
                 if (parts.length >= 3) {
                     const id = parts[0].trim();
-                    const balochi = parts[1].trim().toLowerCase();
-                    const foreign = parts[2].trim().toLowerCase();
-                    
-                    keywordToIdMap.set(balochi, id);
-                    keywordToIdMap.set(foreign, id);
+                    const word = parts[1].trim().toLowerCase();
+                    keywordToIdMap.set(word, id);
                 }
             });
 
