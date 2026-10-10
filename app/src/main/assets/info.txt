@@ -1,0 +1,7 @@
+Global Baluchi Dictionary (GBD)
+━━━━━━━━━━━━━━━━━━━━━━
+This application is completely free and dedicated to language preservation and cultural education.
+
+For more updates, detailed learning guides, and vocabulary databases, please visit our official repository:
+https://thebalochi.com/balochi-english-dictionary-app
+https://github.com

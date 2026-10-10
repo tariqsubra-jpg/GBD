@@ -1,0 +1,6 @@
+1,beeb,companion
+2,shafag,dawn
+3,dost,friend
+4,brath,brother
+100,humb,waterpot
+101,amba,mango

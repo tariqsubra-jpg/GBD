@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.AppCompat.Light.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Brand Colors -->
+        <item name="colorPrimary">#1A237E</item>
+        <item name="colorPrimaryDark">#000051</item>
+        <item name="colorAccent">#FF4081</item>
+
+        <!-- Force modern material styling components onto old fields -->
+        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
+    </style>
+</resources>
