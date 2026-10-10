@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Balochi Dictionary</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #F5F5F5; padding: 20px; color: #333; }
+        .container { max-width: 600px; margin: 40px auto; background: #FFF; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1 { color: #0066CC; text-align: center; margin-top: 0; margin-bottom: 5px; }
+        input { width: 100%; padding: 14px; font-size: 16px; border: 2px solid #DDD; border-radius: 6px; box-sizing: border-box; margin-bottom: 20px; outline: none; transition: border-color 0.2s; }
+        input:focus { border-color: #0066CC; }
+        .results-box { border-top: 2px solid #0066CC; padding-top: 20px; line-height: 1.6; font-size: 18px; min-height: 100px; }
+        .free-tag { text-align: center; color: #777; font-size: 14px; margin-bottom: 25px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Global Balochi Dictionary</h1>
+    <div class="free-tag">100% Free Public Language Preservation Portal</div>
+    
+    <input type="text" id="webSearchInput" placeholder="Type Balochi, English, or Urdu word..." oninput="executeWebSearch()">
+    
+    <div class="results-box" id="webDisplayPanel">
+        Welcome to the Global Baluchi Dictionary. Definitions will display right here in real-time as you type.
+    </div>
+</div>
+
+<script>
+    const keywordToIdMap = new Map();
+    const idToContentMap = new Map();
+
+    async function initializeWebDatabase() {
+        try {
+            const indexResponse = await fetch('app/src/main/assets/en_balochi_index.txt');
+            const indexText = await indexResponse.text();
+            
+            indexText.split('\n').forEach(line => {
+                const parts = line.split(',');
+                if (parts.length >= 3) {
+                    const id = parts[0].trim();
+                    const balochi = parts[1].trim().toLowerCase();
+                    const foreign = parts[2].trim().toLowerCase();
+                    
+                    keywordToIdMap.set(balochi, targetId => id);
+                    keywordToIdMap.set(foreign, targetId => id);
+                    keywordToIdMap.set(balochi, id);
+                    keywordToIdMap.set(foreign, id);
+                }
+            });
+
+            const dataResponse = await fetch('app/src/main/assets/en_balochi_data.txt');
+            const dataText = await dataResponse.text();
+            
+            dataText.split('\n').forEach(line => {
+                const parts = line.split(',');
+                if (parts.length >= 3) {
+                    const id = parts[0].trim();
+                    const foreignExpl = parts[1].trim();
+                    const balochiExpl = parts[2].trim();
+                    
+                    idToContentMap.set(id, `
+                        <strong>📖 Explanation:</strong> ${foreignExpl}<br><br>
+                        <strong>🌴 Balochi:</strong> ${balochiExpl}
+                    `);
+                }
+            });
+        } catch (e) {
+            document.getElementById('webDisplayPanel').innerHTML = "Initializing connection to the cloud dataset repository...";
+        }
+    }
+
+    function executeWebSearch() {
+        const query = document.getElementById('webSearchInput').value.trim().toLowerCase();
+        const display = document.getElementById('webDisplayPanel');
+        
+        if (!query) {
+            display.innerHTML = "Welcome to the Global Baluchi Dictionary. Definitions will display right here in real-time as you type.";
+            return;
+        }
+
+        if (keywordToIdMap.has(query)) {
+            const targetId = keywordToIdMap.get(query);
+            display.innerHTML = idToContentMap.get(targetId);
+        } else {
+            display.innerHTML = `The word '${htmlEscape(query)}' is not registered inside the GBD web records yet.`;
+        }
+    }
+
+    function htmlEscape(str) {
+        return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
+
+    window.onload = initializeWebDatabase;
+</script>
+
+</body>
+</html>
