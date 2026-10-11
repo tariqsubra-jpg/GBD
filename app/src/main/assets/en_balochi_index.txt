@@ -1,7 +1,6 @@
 1,brother,en
 1,bruder,de
 1,frere,fr
-2,brath,bal
 2,new,en
 2,nokh,bal
 2,nouveau,fr
