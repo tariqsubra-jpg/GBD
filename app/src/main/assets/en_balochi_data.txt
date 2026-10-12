@@ -1,2 +1,31 @@
-1,CONCEPT ID: 1 (BROTHER) | [DE] bruder: Bruder (Männliches Geschwisterteil) | [EN] brother: Brother (Male sibling sharing the same parents) | [FR] frere: Frère (Fratrie masculine)
-2,CONCEPT ID: 2 (NEW) | [BAL] nokh: New (Not existing before; recently made or discovered) | [EN] new: New (Not existing before; recently made or discovered) | [FR] nouveau: Nouveau (Qui existe depuis peu de temps)
+1,CONCEPT ID: 1 (BROTHER) | [BAL] brath | [DE] bruder | [EN] brother | [ES] hermano | [FR] frere | [IT] fratello
+2,CONCEPT ID: 2 (NEW) | [BAL] nokh | [DE] neu | [EN] new | [ES] nuevo | [FR] nouveau | [IT] nuovo
+3,CONCEPT ID: 3 (MOTHER) | [BAL] mas | [DE] mutter | [EN] mother | [ES] madre | [FR] mere | [IT] madre
+4,CONCEPT ID: 4 (FATHER) | [BAL] peth | [DE] vater | [EN] father | [ES] padre | [FR] pere | [IT] padre
+5,CONCEPT ID: 5 (WATER) | [BAL] aap | [DE] wasser | [EN] water | [ES] agua | [FR] eau | [IT] acqua
+6,CONCEPT ID: 6 (BOOK) | [BAL] kitab | [DE] buch | [EN] book | [ES] libro | [FR] livre | [IT] libro
+7,CONCEPT ID: 7 (HOUSE) | [BAL] logg | [DE] haus | [EN] house | [ES] casa | [FR] maison | [IT] casa
+8,CONCEPT ID: 8 (SUN) | [BAL] roshag | [DE] sonne | [EN] sun | [ES] sol | [FR] soleil | [IT] sole
+9,CONCEPT ID: 9 (FRIEND) | [BAL] sangat | [DE] freund | [EN] friend | [ES] amigo | [FR] ami | [IT] amico
+10,CONCEPT ID: 10 (SKY) | [BAL] azmaan | [DE] himmel | [EN] sky | [ES] cielo | [FR] ciel | [IT] cielo
+11,CONCEPT ID: 11 (APPLE) | [BAL] soof | [DE] apfel | [EN] apple | [ES] manzana | [FR] pomme | [IT] mela
+12,CONCEPT ID: 12 (NIGHT) | [BAL] shep | [DE] nacht | [EN] night | [ES] noche | [FR] nuit | [IT] notte
+13,CONCEPT ID: 13 (EARTH) | [BAL] digaar | [DE] erde | [EN] earth | [ES] tierra | [FR] terre | [IT] terra
+14,CONCEPT ID: 14 (HEART) | [BAL] dil | [DE] herz | [EN] heart | [ES] corazon | [FR] coeur | [IT] cuore
+15,CONCEPT ID: 15 (LANGUAGE) | [BAL] zaban | [DE] sprache | [EN] language | [ES] lengua | [FR] langue | [IT] lingua
+16,CONCEPT ID: 16 (TIME) | [BAL] waht | [DE] zeit | [EN] time | [ES] tiempo | [FR] temps | [IT] tempo
+17,CONCEPT ID: 17 (CITY) | [BAL] shahr | [DE] stadt | [EN] city | [ES] ciudad | [FR] ville | [IT] citta
+18,CONCEPT ID: 18 (NAME) | [BAL] naam | [DE] name | [EN] name | [ES] nombre | [FR] nom | [IT] nome
+19,CONCEPT ID: 19 (TREE) | [BAL] drahchk | [DE] baum | [EN] tree | [ES] arbol | [FR] arbre | [IT] albero
+20,CONCEPT ID: 20 (ABANDON) | [BAL] یل کنائینگ | [DE] verlassen | [EN] abandon | [ES] abandonar | [FR] abandonner | [IT] abbandonare
+21,CONCEPT ID: 21 (ABILITY) | [BAL] لیاقت | [DE] faehigkeit | [EN] ability | [ES] capacidad | [FR] capacite | [IT] capacita
+22,CONCEPT ID: 22 (ABLE) | [BAL] توانا | [DE] faehig | [EN] able | [ES] capaz | [FR] capable | [IT] capace
+23,CONCEPT ID: 23 (ABOUT) | [BAL] بابت | [DE] ueber | [EN] about | [ES] acerca | [FR] environ | [IT] circa
+24,CONCEPT ID: 24 (ABOVE) | [BAL] برز | [DE] oben | [EN] above | [ES] encima | [FR] au-dessus | [IT] sopra
+25,CONCEPT ID: 25 (ABROAD) | [BAL] در ملک | [DE] im ausland | [EN] abroad | [ES] en el extranjero | [FR] a l-etranger | [IT] all-estero
+26,CONCEPT ID: 26 (ABSENCE) | [BAL] غیرحاضری | [DE] abwesenheit | [EN] absence | [ES] ausencia | [FR] absence | [IT] assenza
+27,CONCEPT ID: 27 (ABSOLUTE) | [BAL] مطلق | [DE] absolut | [EN] absolute | [ES] absoluto | [FR] absolu | [IT] assoluto
+28,CONCEPT ID: 28 (ABSORB) | [BAL] جذب کنگ | [DE] absorbieren | [EN] absorb | [ES] absorber | [FR] absorber | [IT] assorbire
+29,CONCEPT ID: 29 (ABUSE) | [BAL] بدکارگیری | [DE] missbrauch | [EN] abuse | [ES] abuso | [FR] abus | [IT] abuso
+30,CONCEPT ID: 30 (ACADEMIC) | [BAL] علمی | [DE] akademisch | [EN] academic | [ES] academico | [FR] academique | [IT] accademico
+31,CONCEPT ID: 31 (ACCEPT) | [BAL] منّگ | [DE] akzeptieren | [EN] accept | [ES] aceptar | [FR] accepter | [IT] accettare
