@@ -10,15 +10,15 @@
 2,nouveau,fr
 2,nuevo,es
 2,nuovo,it
-3,madre,it
 3,madre,es
+3,madre,it
 3,mas,bal
 3,mere,fr
 3,mother,en
 3,mutter,de
 4,father,en
-4,padre,es
 4,padre,it
+4,padre,es
 4,pere,fr
 4,peth,bal
 4,vater,de
@@ -31,8 +31,8 @@
 6,book,en
 6,buch,de
 6,kitab,bal
-6,libro,es
 6,libro,it
+6,libro,es
 6,livre,fr
 7,casa,it
 7,casa,es
@@ -148,8 +148,8 @@
 25,en el extranjero,es
 25,im ausland,de
 25,در ملک,bal
-26,absence,fr
 26,absence,en
+26,absence,fr
 26,abwesenheit,de
 26,assenza,it
 26,ausencia,es
@@ -161,8 +161,8 @@
 27,assoluto,it
 27,مطلق,bal
 28,absorb,en
-28,absorber,es
 28,absorber,fr
+28,absorber,es
 28,absorbieren,de
 28,assorbire,it
 28,جذب کنگ,bal
@@ -184,3 +184,9 @@
 31,aceptar,es
 31,akzeptieren,de
 31,منّگ,bal
+32,camel,en
+32,camello,es
+32,cammello,it
+32,chameau,fr
+32,kamel,de
+32,اشتر,bal

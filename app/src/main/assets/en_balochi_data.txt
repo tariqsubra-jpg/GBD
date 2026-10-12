@@ -29,3 +29,4 @@
 29,CONCEPT ID: 29 (ABUSE) | [BAL] بدکارگیری | [DE] missbrauch | [EN] abuse | [ES] abuso | [FR] abus | [IT] abuso
 30,CONCEPT ID: 30 (ACADEMIC) | [BAL] علمی | [DE] akademisch | [EN] academic | [ES] academico | [FR] academique | [IT] accademico
 31,CONCEPT ID: 31 (ACCEPT) | [BAL] منّگ | [DE] akzeptieren | [EN] accept | [ES] aceptar | [FR] accepter | [IT] accettare
+32,CONCEPT ID: 32 (CAMEL) | [BAL] اشتر | [DE] kamel | [EN] camel | [ES] camello | [FR] chameau | [IT] cammello
