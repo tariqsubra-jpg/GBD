@@ -1,0 +1,58 @@
+======================================================================
+GLOBAL BALOCHI DICTIONARY (GBD) - SYSTEM ARCHITECTURE DOCUMENTATION
+======================================================================
+Version: 1.0.0
+Domain Layer: globalbalochidictionary.org (Secured via Cloudflare)
+Production Release Target: 1 November 2026
+
+----------------------------------------------------------------------
+📜 HISTORICAL TRIBUTE, CREDIT & ATTRIBUTION
+----------------------------------------------------------------------
+The linguistic datasets, parallel orthographical standards, and matrix 
+lookups engineered in this software are dedicated to the life and memory 
+of Professor Saba Dashtyari. He began laying the foundations for modern 
+Balochi digital indexing at the University of Balochistan in 1984 before 
+he was martyred in Quetta in 2011. 
+
+Data definitions align with academic research frameworks preserved at the 
+Syed Zahoor Shah Hashmi Reference Library in Malir, Karachi, and the 
+literary catalogs of the Balochi Academy.
+
+----------------------------------------------------------------------
+🏗️ CORE ARCHITECTURAL ENGINE: THE ENGLISH POINTER HUB
+----------------------------------------------------------------------
+To avoid scaling bottlenecks (N x (N-1)), GBD utilizes a hub-and-spoke 
+model where English acts as the central relational pointer. All inputs 
+(Latin alphabet, Perso-Arabic scripts, or European target languages) map 
+directly to a shared concept ID linked via English. This allows 
+instantaneous multi-language cross-translations with zero runtime code changes.
+
+----------------------------------------------------------------------
+📂 PIPELINE SCRIPT INVENTORY & FILES
+----------------------------------------------------------------------
+1. Big_Bonanza_Engine.py    -> Builds base GBD_Data_Accumulation.csv 
+                               and inflates rows up to production loads.
+2. inject_real_balochi.py    -> Injects true Balochi script tokens over 
+                               the test placeholders.
+3. gbd_standardizer_engine.py -> Compiles clean, space-tight assets for 
+                               mobile and embeds the dataset into the web app.
+4. MoveAssets_HardLockSystem  -> Bypasses folder locks, pushes assets, and 
+                               applies read-only (444) safety clamps.
+
+----------------------------------------------------------------------
+⌨️ USER LOOKUP & INPUT GUIDE
+----------------------------------------------------------------------
+The search engines are polymorphic. When typing in native Perso-Arabic 
+script keys, remember that Balochi follows consonant-based rules (Abjad) 
+without full explicit phonetic Latin vowels. Focus on root letters for 
+flawless indexing.
+
+----------------------------------------------------------------------
+🚀 FUTURE ROADMAP: VERSION 2.0 PRONUNCIATION SYSTEM
+----------------------------------------------------------------------
+- Audio files will be compressed into lightweight Ogg Opus (.ogg) formats 
+  and named strictly by their concept IDs (e.g., audio_1.ogg).
+- en_balochi_index.txt will receive a third flag token column: "ID,word,has_audio,"
+- Android's native MediaPlayer will load the binary file stream from assets 
+  concurrently, ensuring offline audio performance with zero lag.
+======================================================================
