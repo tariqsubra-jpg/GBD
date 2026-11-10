@@ -27,20 +27,28 @@
     <button onclick="executeClearLayout()" style="padding: 10px 20px; font-weight: bold; background-color: #d9534f; color: white; border: none; border-radius: 4px; cursor: pointer;">Clear Search</button>
     <button onclick="toggleInfoModal(true)" style="padding: 10px 20px; font-weight: bold; background-color: #0275d8; color: white; border: none; border-radius: 4px; cursor: pointer;">Mission & Info</button>
 </div>
-
 <!-- Secure Strategic Info Modal Window Overlay Container -->
 <div id="infoModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); z-index: 1000; align-items: center; justify-content: center;">
-    <div style="background-color: #1e1e1e; color: #ffffff; padding: 30px; border-radius: 8px; max-width: 600px; width: 90%; border: 1px solid #333; position: relative;">
+    <div style="background-color: #1e1e1e; color: #ffffff; padding: 30px; border-radius: 8px; max-width: 600px; width: 90%; border: 1px solid #333; position: relative; margin: auto;">
         <h3 style="margin-top: 0; color: #5cb85c;">🛡️ Our Linguistic Fortress Mission</h3>
         <p style="line-height: 1.6;">Welcome to the sovereign preservation zone for the Balochi language. Many large corporate utilities rely on raw automated scrapers that contaminate our pure lexicon with external Farsi or Urdu loanwords.</p>
-        <div style="background-color: #2d2d2d; padding: 15px; border-left: 4px solid #d9534f; margin: 15px 0; border-radius: 4px;">
-            <strong style="color: #d9534f;">⚠️ CRITICAL SECURITY DIRECTIVE:</strong><br>
-            If you identify any mistranslated, corrupted, or missing words inside corporate translation systems, <strong>do not report them back to corporate platforms.</strong> Send all corrections exclusively to our team so we can protect them here!
+        
+        <!-- 📥 The Community Template Download Utility Link -->
+        <div style="text-align: center; margin: 20px 0;">
+            <a href="./bdeb_master_template.csv" download style="display: inline-block; padding: 12px 20px; background-color: #5cb85c; color: white; text-decoration: none; font-weight: bold; border-radius: 4px;">
+                📥 Download Master CSV Template File
+            </a>
         </div>
-        <button onclick="toggleInfoModal(false)" style="padding: 8px 16px; background-color: #5cb85c; color: white; border: none; border-radius: 4px; cursor: pointer; float: right; font-weight: bold;">Understood</button>
+
+        <!-- 📬 Your Authoritative New Secure Submission Channel -->
+        <p style="line-height: 1.5; font-size: 1em; text-align: center; background-color: #222; padding: 12px; border-radius: 4px; border: 1px solid #444;">
+            <strong>📬 Forward Completed Sheets Natively To:</strong><br>
+            <a href="mailto:globalbalochidictionary@gmail.com" style="color: #ffcc00; font-weight: bold; font-size: 1.1em; text-decoration: underline;">globalbalochidictionary@gmail.com</a>
+        </p>
+
+        <button onclick="toggleInfoModal(false)" style="padding: 8px 16px; background-color: #0275d8; color: white; border: none; border-radius: 4px; cursor: pointer; float: right; font-weight: bold; margin-top: 10px;">Understood</button>
     </div>
 </div>
-  
     <input type="text" id="webSearchInput" placeholder="Type Balochi, English, or Urdu word..." oninput="executeWebSearch()">
     
     <div class="results-box" id="webDisplayPanel">
