@@ -91,6 +91,21 @@
         }
     }
 
+    function formatMultilingualEntry(rawText) {
+        const segments = rawText.split('|').map(s => s.trim());
+        const formattedLines = segments.map(seg => {
+            if (seg.startsWith('CONCEPT ID:')) return `<div style="font-weight: bold; color: #ffcc00; margin-bottom: 10px; font-size: 1.1em;">🆔 ${htmlEscape(seg)}</div>`;
+            if (seg.startsWith('[BAL]')) return `<div style="padding: 6px 0; font-size: 1.15em; color: #5cb85c; font-weight: bold;">☀️ ${htmlEscape(seg)}</div>`;
+            if (seg.startsWith('[DE]')) return `<div style="padding: 4px 0;">🇩🇪 ${htmlEscape(seg)}</div>`;
+            if (seg.startsWith('[EN]')) return `<div style="padding: 4px 0;">🇬🇧 ${htmlEscape(seg)}</div>`;
+            if (seg.startsWith('[ES]')) return `<div style="padding: 4px 0;">🇪🇸 ${htmlEscape(seg)}</div>`;
+            if (seg.startsWith('[FR]')) return `<div style="padding: 4px 0;">🇫🇷 ${htmlEscape(seg)}</div>`;
+            if (seg.startsWith('[IT]')) return `<div style="padding: 4px 0;">🇮🇹 ${htmlEscape(seg)}</div>`;
+            return `<div style="padding: 4px 0;">${htmlEscape(seg)}</div>`;
+        });
+        return `<div style="text-align: left; max-width: 450px; margin: 0 auto; line-height: 1.6;">${formattedLines.join('')}</div>`;
+    }
+
     function executeWebSearch() {
         const query = document.getElementById('webSearchInput').value.trim().toLowerCase();
         const display = document.getElementById('webDisplayPanel');
@@ -100,10 +115,12 @@
             return;
         }
 
-        if (keywordToIdMap.has(query)) {
+                if (keywordToIdMap.has(query)) {
             const targetId = keywordToIdMap.get(query);
-            display.innerHTML = idToContentMap.get(targetId);
+            const rawContent = idToContentMap.get(targetId);
+            display.innerHTML = formatMultilingualEntry(rawContent);
         } else {
+
             display.innerHTML = `The word '${htmlEscape(query)}' is not registered inside the GBD web records yet.`;
         }
     }
